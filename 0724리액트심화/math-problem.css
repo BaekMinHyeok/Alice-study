@@ -1,0 +1,4 @@
+.problem span:not(:first-of-type) { /* 첫번째 span태그를 제외한 나머지 span태그 모두 선택 */
+  margin-left: 12px;
+}
+

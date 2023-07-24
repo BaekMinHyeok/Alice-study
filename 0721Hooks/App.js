@@ -88,6 +88,29 @@ return (
 );
 }
 
+//React의 컴포넌트는 Mounting, Updating, Unmounting을 가지며 각 과정은 컴포넌트가 생성되고, 수정되고, 해제될 때를 의미합니다.
+class App extends React.Component {
+  // componentDidMount() 메소드를 완성하세요.
+componentDidMount() {
+    alert(`${this.state.count}번 클릭했습니다.`)
+}
+  // componentDidUpdate() 메소드를 완성하세요.
+componentDidUpdate() {
+    alert(`${this.state.count}번 클릭했습니다.`)
+}
+}
+
+function HideAndSeek() {
+  // 지시사항에 따라 코드를 작성하세요.
+    useEffect(() => {
+        alert("토끼를 찾았습니다!");
+
+        return function cleanup() {
+            alert("토끼가 숨었습니다.")
+        }
+    })
+  return "토끼 등장";
+}
 
 
 export default App;
