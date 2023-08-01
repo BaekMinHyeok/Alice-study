@@ -1,6 +1,4 @@
 //0731
-// spa는 Server-side routing 기술을 활용하여 페이지 진입 시 리로드 없이 라우팅한다.
-//Promise가 중첩되어 있고 에러가 발생하는 경우 .catch 뒤에 있는 핸들러들은 동작하지 않고 종료된다.
 
 import React from 'react';
 
