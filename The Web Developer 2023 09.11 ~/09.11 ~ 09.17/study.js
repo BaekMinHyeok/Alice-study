@@ -53,13 +53,12 @@ console.log(arr); // [5, 4, 3, 2, 1]
 
 
 slice() // 배열 자르기
-const fruits = ["사과", "바나나", "체리", "딸기", "포도"];
-const slicedFruits = fruits.slice(1, 3); //1부터 3전까지
+const fruit = ["사과", "바나나", "체리", "딸기", "포도"];
+const slicedFruits = fruit.slice(1, 3); //1부터 3전까지
 console.log(slicedFruits); // ["바나나", "체리"]
 
 splice() // 배열의 내용을 추가하거나 제거하는 데 사용 후 업데이트
-  >
-  array.splice(start, deleteCount, item1, item2, ...)
+//array.splice(start, deleteCount, item1, item2, ...)
 
 //start: 수정을 시작할 인덱스를 나타내는 정수 값입니다.
 //deleteCount: 제거할 요소의 수를 나타내는 정수 값입니다. 만약 0 이상의 값으로 설정하면 해당 인덱스부터 시작하여 해당 수만큼의 요소를 제거합니다.
@@ -79,7 +78,7 @@ console.log({
   nums,
   sortedNums
 }); {
-  nums: [3, 1, 2],
+  nums: [3, 1, 2];
   sortedNums: [1, 2, 3]
 }
 
