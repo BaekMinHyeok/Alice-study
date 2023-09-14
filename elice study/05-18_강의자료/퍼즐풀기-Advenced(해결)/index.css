@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    margin: 30px;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.line {
+    width: 100%;
+    height: 16%;
+    border: solid 2px gray;
+    display: flex;
+    align-items: flex-start;
+    align-content: start;
+
+}
+
+.red {
+    background-color: red;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+.orange {
+    background-color: orange;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+.black {
+    background-color: black;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+.blue {
+    background-color: blue;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+.pink {
+    background-color: pink;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+.green {
+    background-color: green;
+    flex-grow: 1;
+    height: 100%;
+    border: solid 2px gray;
+}
+
+
+
+
+@media (max-width: 800px) {
+    #main {
+        transform: rotate(360deg);
+        transition: 2s linear;
+    }
+
+    .red {
+        order: 1;
+    }
+
+    .orange {
+        order: 2;
+    }
+
+    .black {
+        order: 3;
+    }
+
+    .blue {
+        order: 4;
+    }
+
+    .pink {
+        order: 5;
+    }
+
+    .green {
+        order: 6;
+    }
+
+}
