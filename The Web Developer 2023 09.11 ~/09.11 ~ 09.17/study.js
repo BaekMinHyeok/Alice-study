@@ -92,7 +92,10 @@ midterms['danielle'] = "A"
 //midterms = {danielle: "A", thomas: "C+"}
 
 
-//for 루프
+// for 루프 (반복할 조건 O)
+for (초기식; 조건식; 증감식) {
+  // 조건식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문
+}
 for (let i = 1; i <= 10; i++) {
   console.log(i);
   //1~10까지
@@ -100,3 +103,43 @@ for (let i = 1; i <= 10; i++) {
 for (let num = 1; num <= 10; num += 1) {
   console.log(num)
 }
+
+// while 루프 (반복할 조건이 안 정해졌을때 보통 사용)
+let count = 0;
+while (count < 10) {
+  count++;
+  console.log(count)
+}
+
+for (변수 of 객체) {
+  // 객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문
+}
+const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer', 'gunners'];
+for (let subreddit of subreddits) {
+  console.log(`Visit reddit.com/r/${subreddit}`)
+} //Visit reddit.com/r/cringe 부터 gunners 까지 배열값들이 들어감
+
+for (변수 in 객체) {
+  // 객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문
+}
+const testScores = {
+  keenan: 80,
+  damon: 67,
+  kim: 89,
+  shawn: 91,
+  marlon: 72,
+  dwayne: 77,
+  nadia: 83,
+  elvira: 97,
+  diedre: 81,
+  vonnie: 60
+}
+for (let person in testScores) {
+  console.log(`${person} scored ${testScores[person]}`);
+}
+let total = 0;
+let scores = Object.values(testScores);
+for (let score of scores) {
+  total += score;
+}
+console.log(total / scores.length) //평균값
