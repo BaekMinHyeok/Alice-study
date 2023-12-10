@@ -48,3 +48,33 @@ obj6.b.c = "def";
 
 console.log(obj5); // { a: 10, b: { c: "def" } }
 console.log(obj6); // { a: 20, b: { c: "def" } }
+
+
+
+
+var person1 = {
+  name: 'Lee'
+}
+var person2 = {
+  name: 'Lee'
+}
+var person3 = {
+  ...person1
+};
+
+
+console.log(person1 === person2); //1
+console.log(person1.name === person2.name); //2
+console.log(person1 === person3); //3
+
+var person4 = {
+  name: {
+    first: 'll',
+    last: 'jj'
+  }
+}
+var person5 = {
+  ...person4
+}
+person5.name.first = 'dd';
+console.log(person4.name.first === person5.name.first) //4
