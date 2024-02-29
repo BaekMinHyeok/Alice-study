@@ -6,9 +6,15 @@ enum Role {
     USER,
     GUEST,
 }
+
+enum Language  {
+  korean = "ko",
+  english = "en"
+}
 const user1 = {
     name: "백민혁",
     role: Role.ADMIN, //0은 관리자
+    language: Language.korean
 };
 const user2 = {
     name: "홍길동",
