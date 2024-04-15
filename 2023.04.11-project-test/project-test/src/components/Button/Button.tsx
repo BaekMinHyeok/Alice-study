@@ -3,9 +3,7 @@ import "./button.css";
 
 interface ButtonProps {
     primary?: boolean;
-    /**
-     * What background color to use
-     */
+    // ss
     backgroundColor?: string;
     /**
      * How large should the button be?
