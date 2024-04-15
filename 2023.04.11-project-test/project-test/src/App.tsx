@@ -16,7 +16,7 @@ function App() {
       </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+         테스트 해보자
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
