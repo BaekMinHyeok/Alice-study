@@ -1,32 +1,44 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { useForm, FormProvider, useFormContext } from "react-hook-form";
 
-function App() {
-    const [count, setCount] = useState(0);
+const ParentForm = () => {
+    const methods = useForm();
 
     return (
-        <>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-            </div>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                    테스트
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
+        <FormProvider {...methods}>
+            <ChildForm />
+        </FormProvider>
     );
-}
+};
+
+const ChildForm = () => {
+    const { register, handleSubmit } = useFormContext();
+    const onSubmit = (data) => console.log(data);
+
+    return (
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
+            <input
+                type="text"
+                name="firstName"
+                {...methods.register("firstName")}
+            />
+            <input
+                type="text"
+                name="lastName"
+                {...methods.register("lastName")}
+            />
+            <button type="submit">Submit</button>
+        </form>
+    );
+};
+
+const App = () => {
+    return (
+        <div>
+            <h1>My Form</h1>
+            <ParentForm />
+        </div>
+    );
+};
 
 export default App;
