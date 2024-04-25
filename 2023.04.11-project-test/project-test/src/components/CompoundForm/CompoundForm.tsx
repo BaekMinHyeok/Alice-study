@@ -73,3 +73,26 @@ const LoginInputs = () => {
 };
 
 export default LoginForm;
+
+// import { InputHTMLAttributes, forwardRef } from "react";
+// import styles from "./index.module.scss";
+
+// interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+//     className?: string;
+//     title?: string;
+// }
+
+// export const Input = forwardRef<HTMLInputElement, InputProps>(
+//     ({ className, title, ...inputProps }, ref) => {
+//         return (
+//             <label className={styles.container}>
+//                 {title && <div className={className}>{title}</div>}
+//                 <input
+//                     ref={ref}
+//                     className={`${styles.element} ${className || ""} m-big`}
+//                     {...inputProps}
+//                 />
+//             </label>
+//         );
+//     }
+// );
